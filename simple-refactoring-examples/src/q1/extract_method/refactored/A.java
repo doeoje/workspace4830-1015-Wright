@@ -4,35 +4,36 @@ import java.util.List;
 
 public class A {
    Node m1(List<Node> nodes, String p) {
-      // TODO: Your answer
+	  extractedMethod(nodes,p);
       // other implementation
       return null;
    }
 
    Edge m2(List<Edge> edgeList, String p) {
-      // TODO: Your answer
-      // other implementation
+      extractedMethod(edgeList,p);
       return null;
    }
 
    // TODO: Your answer
-   // ? extractedMethod(?) {
-   //
-   // }
+   <E extends Graph> void extractedMethod(List<E> items, String p) {
+	   for(E item: items)
+	   {
+		   if(item.contains(p)) System.out.println(item);
+	   }
+    }
 }
 
-class Node {
-   String name;
-
-   public boolean contains(String p) {
-      return name.contains(p);
-   }
+class Graph
+{
+	String name;
+	public boolean contains(String p) {
+	      return name.contains(p);
+	   }
 }
 
-class Edge {
-   String name;
+class Node extends Graph {
+   
+}
 
-   public boolean contains(String p) {
-       return name.contains(p);
-   }
+class Edge extends Graph{
 }
